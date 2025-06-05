@@ -1,0 +1,40 @@
+Khi chạy test case song song thì các test case phải độc lập, không phụ thuộc nhau
+
+Chạy test case song song bao nhiêu luồng phụ thuộc vào Ram và Chip của máy, máy yếu thì chạy 2-3 luồng
+
+VD:
+TC01: testCaseCreateCustomer     : Create Customer 1
+TC02: testCaseEditCustomer       : Create Customer 2 > Edit Customer 2
+TC03: testCaseDeleteCustomer     : Create Customer 3 > Delete Customer 3
+
+Như ví dụ thì các test case đã độc lập, không phụ thuộc nhau
+
+
+===================================
+
+Có 3 loại chạy song song
+=> Chạy song song với tests, clases, methods
+
+Với Tests là các thẻ test trong file suite, khi chạy song song thì để parallel='tests' ở trong thẻ suite
+
+Với Clases là các file class, khi chạy song song thì để parallel='classes' ở trong thẻ test
+
+Với Methods là các @Test trong file class, khi chạy song song thì để parallel='methods' ở trong thẻ test
+
+
+
+Tests ==> Chạy song song nhiều test nhưng classes và methods (hay @Test) trong Tests sẽ chạy tuần tự
+
+Classes ==> Chạy song song nhiều file class nhưng methods (hay @Test) bên trong file class sẽ chạy tuần tự
+
+Methods (hay @Test) ==> Chạy song song nhiều @Test
+
+===================================
+
+Để giới hạn số luồng, ta sử dụng thread-count="số luồng mong muốn" ngay sau parallel. Tức parallel đặt ở đâu thì thread-count đặt ở đó
+
+===================================
+
+Có thể chạy kết hợp nhiều classes và nhiều methods với nhau. Buổi 45, 1:10:06 selenium java
+
+

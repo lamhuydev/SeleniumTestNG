@@ -1,0 +1,9 @@
+- Hard Assert: Khi 1 test case gặp lỗi, Hard Assert sẽ lập tức dùng test case đó lại.
+               Dùng trong trường hợp Test Case 1 và Test Cas2 tác động với nhau.
+               Khi dùng cần import org.testng.Assert;
+
+
+- Soft Assert: Trong luồng chạy của 1 test gặp, khi gặp lỗi thì test case đó vẫn tiếp tục chạy. Ngược lại với Hard Assrt
+               Dùng trong trường hợp Test Case 1 và Test Cas2 không tác động hay ảnh hưởng tới nhau.
+               Khi dùng cần import org.testng.asserts.SoftAssert; và phải khai báo đối tượng SoftAssert SoftAssert softAssert = new SoftAssert();
+               Ở dòng cuối cùng của function chứa Soft Assert bắt buộc phải có softAssert.assertAll();

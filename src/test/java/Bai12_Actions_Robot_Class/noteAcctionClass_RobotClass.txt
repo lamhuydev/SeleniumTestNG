@@ -1,0 +1,3 @@
+action class và robot là dùng để thao tác với chuột và bàn phím -> xử lý hành động với chuột và bàn phím
+
+action thuộc selenium - robot thuộc java

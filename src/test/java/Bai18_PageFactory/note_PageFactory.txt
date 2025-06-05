@@ -1,0 +1,13 @@
+Page Factory là phần mở rộng của POM nên cấu trúc code giống nhau chỉ có 2 thứ thay đổi:
+- Đổi từ đối tượng By sang đối tượng element
+Ví dụ: dòng khai báo bằng By này
+        private By headerPage = By.xpath("//h1[normalize-space()='Login']");
+        sẽ đổi thành
+        @FindBy(xpath = "//h1[normalize-space()='Login']")
+            private WebElement headerPage;
+
+@FindBy(xpath="") tương tự như driver.findElement(By.xpath())
+
+
+- Trong hàm xây dựng phải Khởi tạo các phần tử bằng initElements ()
+    Cú pháp: PageFactory.initElements(driver,this); (đặt trong hàm xây dựng)

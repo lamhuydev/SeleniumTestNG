@@ -1,0 +1,10 @@
+JsExecutor sử dụng nhiều nhất là scrollIntoView(true) và highlight element
+
+=>>>> cú pháp khai báo JavascriptExecutor
+JavascriptExecutor js = (JavascriptExecutor) driver;
+
+
+// lăn chuột đến vị trí WebElement
+// giá trị true là cuộn nằm phía trên
+// giá trị false là cuộn nằm phía dưới
+cú pháp: js.executeScript(arguments[0].scrollIntoView(true);, WebElement)

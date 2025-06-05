@@ -1,0 +1,12 @@
+Chú thích (annotation) là các dòng như @Test, @BeforeMethod,...
+
+||************ Khi ở class cha và class con đều có Before và After thì ưu tiên chạy cặp Before và After ở class cha trước ************||
+    => xét trên khía cạnh suite -> test -> class -> group -> method
+- BeforeSuite - AfterSuite dùng để trước hàm suite. Được sử dụng trong nội bộ và ngoài nội bộ 1 class
+    VD: file 1 là file chung được extends bởi file 2 và file 3 thì BeforeSuite - AfterSuite có thể quản lý cả 3 file
+
+
+- BeforeClass - AfterClass có ta dụng như BeforeSuite - AfterSuite nhưng chỉ quản lý hay sử dụng trong nội bộ 1 class
+
+
+
